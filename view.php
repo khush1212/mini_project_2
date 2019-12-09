@@ -5,16 +5,23 @@
 <?php
 include'config.php';
 $id = $_REQUEST['id'];
+$user_name = $_REQUEST['user_name'];
 
 $back_url = $_SERVER['HTTP_REFERER'];
 if (strpos($back_url, 'cdl.php') !== false) {
-  if ($id != 1) {
-    $sql="SELECT * FROM mini WHERE id =".$id;
+  if ($user_name != 'admin') {
+    $sql="SELECT * FROM `mini` where username = '$user_name'";
+    echo $sql;
   } else {
     $sql="SELECT * FROM mini";
   }
 } else {
-  $sql="SELECT * FROM mini";
+  if ($user_name != 'admin') {
+    $sql="SELECT * FROM `mini` where username = '$user_name'";
+    echo $sql;
+  } else {
+    $sql="SELECT * FROM mini";
+  }
 }
 $result=$conn->query($sql);
 
@@ -52,7 +59,7 @@ if ($result->num_rows>0) {
   <td><?php echo $row['mobile'];?></td>
 
 
-  <td><a href="edit.php?edit_id=<?php echo $row['id'];?>" alt="edit">Edit</a></td>
+  <td><a href="edit.php?edit_username=<?php echo $row['username'];?>" alt="edit">Edit</a></td>
 
 </tr>
 

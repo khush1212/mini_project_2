@@ -1,4 +1,5 @@
 <?php
+	include'config.php';
 	include 'auth.php';
 ?>
 
@@ -79,12 +80,21 @@
 						<a href="#">tokidoki</a>
 					</div>
 					<?php if (!empty($_SESSION['logged_in'] = 1) && !empty($_SESSION['user_name'])) { ?>
-					<div class="menulist">
-						<a href="view.php?user_name=<?php echo $_SESSION['user_name'];?>">View</a>
-					</div>
-					<div class="menulist">
-						<a href="cdl.php">CDL</a>
-					</div>
+						<div class="menulist">
+							<a href="view.php?user_name=<?php echo $_SESSION['user_name'];?>">View</a>
+						</div>
+
+						<?php
+							$username = $_SESSION['user_name'];
+							$sql="SELECT * FROM `mini` where username ='$username'";
+							$result=$conn->query($sql);
+							$row=mysqli_fetch_array($result);
+							if ($row['admin_role'] == 1) {
+						?>
+							<div class="menulist">
+								<a href="cdl.php">CDL</a>
+							</div>
+						<?php } ?>
 					<?php } ?>
 				</div>
 			</div>

@@ -55,7 +55,7 @@ if(mysqli_num_rows($result) > 0)
     <td>'.$row["password"].'</td>
     <td>'.$row["mobile"].'</td>
     <td>'.$row["dob"].'</td>
-    <td><a href="view.php?id='.$row["id"].'">View</a></td>
+    <td><a href="view.php?user_name='.$row["username"].'">View</a></td>
     <td><a href="delete.php">Delete</a></td>
     <td><a href="make_.php">Make Admin</a></td>
    </tr>
