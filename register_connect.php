@@ -1,6 +1,7 @@
 <?php
 
-$conn = mysqli_connect('localhost','root','root','mini_project_2');
+include 'config.php';
+include 'auth.php';
 
 if(!$conn)
 {
@@ -19,6 +20,7 @@ if(!$conn)
 	if(mysqli_query($conn,$sql))
 	{
 		$_SESSION['logged_in'] = 1;
+		$_SESSION['user_name'] = $username;
 		header("Location: home.php"); // Redirecting to home page
 	}
 	else

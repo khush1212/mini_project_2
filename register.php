@@ -34,7 +34,7 @@
         </div>
         
       <div>
-        <input type="submit" name="submit" value="Registered"><br><br>
+        <input type="submit" name="submit" value="Register"><br><br>
       </div>
       
         <span>Already Registered ? Click <a href="login.php">login</a></span> 

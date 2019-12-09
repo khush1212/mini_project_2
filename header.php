@@ -37,11 +37,17 @@
 							<span class="account_and_cart_img">
 								<div class="dropdown">
 									<span class="dropbtn"><i class="fa fa-user-o"></i></span>
-								 	 <div class="dropdown-content">
-										<a href="login.php">Login</a>
-										<a href="register.php">Register</a>
-										<a href="logout.php">Logout</a>
-									</div>
+									<?php if (!empty($_SESSION['logged_in'] = 1) && !empty($_SESSION['user_name'])) { ?>
+										<div class="loggedin_dropdown_content">
+											<a href=""><?php echo "Hi ".$_SESSION['user_name']; ?></a>
+											<a href="logout.php">Logout</a>
+										</div>
+									<?php } else { ?>
+										<div class="dropdown-content">
+											<a href="login.php">Login</a>
+											<a href="register.php">Register</a>
+										</div>
+									<?php } ?>
 									<span><i class="fa fa-shopping-bag"></i></span>
 								</div>
 							</span>
@@ -72,14 +78,14 @@
 					<div class="menulist">
 						<a href="#">tokidoki</a>
 					</div>
-					<?php //if ($_SESSION['logged_in'] = 1) : ?>
+					<?php if (!empty($_SESSION['logged_in'] = 1) && !empty($_SESSION['user_name'])) { ?>
 					<div class="menulist">
-						<a href="view.php">View</a>
+						<a href="view.php?user_name=<?php echo $_SESSION['user_name'];?>">View</a>
 					</div>
 					<div class="menulist">
 						<a href="cdl.php">CDL</a>
 					</div>
-					<?php //endif; ?>
+					<?php } ?>
 				</div>
 			</div>
 			<div class="order_info">

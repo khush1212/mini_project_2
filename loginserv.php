@@ -1,5 +1,8 @@
 <?php
 
+	include 'config.php';
+	include 'auth.php';
+
 	$error=''; //Variable to Store error message
 	if(isset($_POST['submit'])){
 		if(empty($_POST['user']) || empty($_POST['pass'])){
@@ -8,19 +11,14 @@
  			//Define $user and $pass
 			$user=$_POST['user'];
 			$pass=$_POST['pass'];
- 			
- 			//Establishing Connection with server by passing server_name, user_id and pass as a patameter
-			$conn = mysqli_connect("localhost", "root", "root");
- 			
- 			//Selecting Database
-			$db = mysqli_select_db($conn, "mini_project_2");
- 			
+
  			//sql query to fetch information of registerd user and finds user match.
 			$query = mysqli_query($conn, "SELECT * FROM mini WHERE password='$pass' AND username='$user'");
-			$rows = mysqli_num_rows($query);
-			
-			if($rows == 1){
+			$rows = mysqli_fetch_array($query);
+
+			if(is_array($rows)){
 				$_SESSION['logged_in'] = 1;
+				$_SESSION['user_name'] = $rows['username'];
 				header("Location: home.php"); // Redirecting to home page
 			} else {
 				$error = "Username and Password is Invalid";
