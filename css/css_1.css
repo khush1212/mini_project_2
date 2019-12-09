@@ -1,0 +1,228 @@
+body {
+    margin: 0px;
+    font-family: "tondo",sans-serif;
+    font-weight: 400;
+}
+
+.header_wrapper .offer_countdown {
+    background-color: #222220;
+    text-align: center;
+    color: #fff;
+    padding: 10px;
+    font-size: 16px;
+}
+.header_wrapper .main_header_content {
+    padding: 1%;
+}
+.header_wrapper .main_header_content .logo {
+    width: 60%;
+    display: inline-block;
+    float: left;
+}
+.header_wrapper .main_header_content .logo img {
+    width: 103px;
+    height: auto;
+    padding-left: 75%;
+    padding-top: 1%;
+}
+
+.header_wrapper .main_header_content .account_wrapper .search_and_account_wrapper .searchbar_and_account span .dropbtn{
+  color: #000;
+  padding: 16px;
+  font-size: 28px;
+  border: none;
+  cursor: pointer;
+}
+.header_wrapper .main_header_content .account_wrapper .search_and_account_wrapper .searchbar_and_account .dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.header_wrapper .main_header_content .account_wrapper .search_and_account_wrapper .searchbar_and_account.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.header_wrapper .main_header_content .account_wrapper .search_and_account_wrapper .searchbar_and_account.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.header_wrapper .main_header_content .account_wrapper .search_and_account_wrapper .searchbar_and_account .dropdown-content a:hover {background-color: #f1f1f1}
+
+.header_wrapper .main_header_content .account_wrapper .search_and_account_wrapper .searchbar_and_account .dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.header_wrapper .main_header_content .account_wrapper .search_and_account_wrapper .searchbar_and_account .dropdown:hover .dropbtn {
+  background-color: #f2f2f2;
+}
+
+
+.header_wrapper .main_header_content .account_wrapper .search_and_account_wrapper .searchbar_and_account .relative {
+    position: relative;
+}
+.header_wrapper .main_header_content .account_wrapper .search_and_account_wrapper .searchbar_and_account .absolute {
+    position: absolute;
+    font-size: 18px;
+    top: 6px;
+    left: 90%;
+}
+.header_wrapper .main_header_content .account_wrapper .search_and_account_wrapper .searchbar_and_account .account_and_cart_img {
+    font-size: 28px;
+    padding-left: 140px;
+}
+.header_wrapper .main_header_content .account_wrapper .search_and_account_wrapper .searchbar_and_account .account_and_cart_img .test {
+    padding-right: 40px;
+}
+.header_wrapper .main_header_content .account_wrapper .search_and_account_wrapper .searchbar_and_account .searchbar {
+    padding-left: 32%;
+}
+.header_wrapper .main_header_content .account_wrapper .search_and_account_wrapper .searchbar_and_account .searchbar  input[type="search"] {
+    height: 35px;
+    width: 100%;
+    text-transform: uppercase;
+}
+
+.header_wrapper .main_header_content .account_wrapper .search_and_account_wrapper .searchbar_and_account span .dropbtn{
+  color: #000;
+  padding: 16px;
+  font-size: 28px;
+  border: none;
+  cursor: pointer;
+}
+.header_wrapper .main_header_content .account_wrapper .search_and_account_wrapper .searchbar_and_account .dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  /*min-width: 160px;*/
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: #f2f2f2;
+}
+
+.header_wrapper .main_header_content .account_wrapper .search_and_account_wrapper {
+    display: inline-flex;
+}
+.header_wrapper .main_header_content .account_wrapper .search_and_account_wrapper .searchbar_and_account {
+    float: left;
+}
+.header_wrapper .main_header_content .account_wrapper .search_and_account_wrapper .searchbar_and_account div {
+    width: 100%;
+}
+ul {
+    list-style-type: none;
+}
+a {
+    color: inherit;
+}
+.header_wrapper .category {
+    border-top: solid #d9d9d9;
+    border-bottom: solid #d9d9d9;
+    border-width: 1px;
+}
+.header_wrapper .category .menu {
+    display: inline-flex;
+    padding-left: 25%;
+}
+.header_wrapper .category .menu .menulist {
+    float: left;
+    padding: 10px 15px;
+}
+.header_wrapper .category .menu .menulist a {
+    width: 100%;
+}
+.header_wrapper .order_info .order_shipment_offer {
+    display: inline-flex;
+    padding-left: 24%;
+}
+.header_wrapper .order_info .order_shipment_offer .orders {
+    float: left;
+    padding: 15px 10px;
+}
+.header_wrapper .order_info .order_shipment_offer .orders div {
+    width: 100%;
+    padding-top: 2px;
+}
+.header_wrapper .order_info .order_shipment_offer .orders {
+    display: inline-flex;
+}
+.header_wrapper .order_info .order_shipment_offer .orders span.icons {
+    padding: 0 10px;
+    font-size: 15px;
+}
+
+
+.footer_wrapper {
+    background: #f2f2f2;
+    width: 100%;
+}
+.footer_wrapper .socialicons_companylinks {
+    display: inline-flex;
+    width: 100%;
+}
+.footer_wrapper .socialicons_companylinks .company_links {
+    float: left;
+    width: 100%;
+    padding: 10px;
+}
+.footer_wrapper .socialicons_companylinks .company_links ul {
+    list-style-type: none;
+    padding: 15px 0;
+    padding-inline-start: 0px;
+}
+.footer_wrapper .socialicons_companylinks .company_links ul li {
+    line-height: 40px;
+    text-align: left;
+}
+.footer_wrapper .policy_terms {
+    text-align: center;
+    padding: 20px;
+}
+.footer_wrapper .policy_terms .seperator {
+    padding: 0 20px;
+}
+ul.font-awesome li {
+    display: inline-block;
+    font-size: 16px;
+    width: 30px;
+    height: 30px;
+    border-radius: 35px;
+    margin: 0px 7px;
+    border: 2px solid #676767;
+    line-height: 30px !important;
+    text-align: center !important;
+}
+.footer_wrapper .socialicons_companylinks .fafa_font {
+    padding-top: 35px;
+}
+.footer_wrapper .socialicons_companylinks .fafa_font ul.font-awesome {
+    text-align: center;
+}

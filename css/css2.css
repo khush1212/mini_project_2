@@ -1,0 +1,63 @@
+/*form input{
+width:99%;
+padding:10px;
+margin-top:8px;
+border:1px solid #ccc;
+padding-left:5px;
+font-size:16px;
+font-family:Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", serif; 
+}
+ form  input[type=submit]{
+width:100%;
+background-color:#f2f2f2;
+color:#000;
+border:2px solid gray;
+padding:10px;
+font-size:20px;
+cursor:pointer;
+border-radius:5px;
+margin-bottom:15px; 
+}
+ form span a{
+    color: red;
+}
+form{
+ background-color: lightgrey;
+  width: 300px;
+  border: 15px solid #f2f2f2;
+  padding: 50px;
+  margin: auto;
+ }*/
+.main_wrapper .register_user {
+    width: 20%;
+    margin: 0 auto;
+    border: 15px solid #f2f2f2;
+    background-color: lightgrey;
+    padding: 50px;
+}
+.main_wrapper .register_user input {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+    border:1px solid #ccc;
+}
+.main_wrapper .register_user input[type] {
+    color:#636363;
+}
+.main_wrapper .register_user form  input[type=submit]{
+width:100%;
+background-color:#f2f2f2;
+color:#000;
+border:2px solid gray;
+padding:10px;
+font-size:20px;
+cursor:pointer;
+border-radius:5px;
+margin-bottom:15px; 
+}
+.main_wrapper .register_user .register_1{
+    text-align: center;
+}
+.main_wrapper .register_user  span a{
+    color: red;
+}

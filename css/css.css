@@ -1,0 +1,76 @@
+
+.content .banner_slider img {
+    width: 100%;
+}
+.content .short_banners .tile_banner_tops {
+    display: inline-flex;
+}
+.content .short_banners .tile_banner_tops .tile_banner_front {
+    float: left;
+    width: 33.33%;
+    padding: 10px;
+}
+
+.content .short_banners .tile_banner_tops .tile_banner_front img {
+    width: 100%;
+}
+.content .short_banners .promo_short_banner {
+    display: inline-flex;
+}
+.content .short_banners .promo_short_banner .tile_short_front {
+    float: left;
+    width: 50%;
+    padding: 10px 10px 0px 10px;
+}
+.content .short_banners .promo_short_banner .tile_short_front img {
+    width: 100%;
+}
+.content .short_banners .tile_banner_jeans {
+    display: inline-flex;
+}
+.content .short_banners .tile_banner_jeans .tile_banner_back {
+    float: left;
+    width: 33.33%;
+    padding: 10px;
+}
+.content .short_banners .tile_banner_jeans .tile_banner_back img {
+    width: 100%;
+}
+.content .short_banners .order_info .order_shipment_offer {
+    display: inline-flex;
+    /*padding-left: 24%;*/
+    width: 100%;
+}
+.content .short_banners .order_info .order_shipment_offer .orders {
+    float: left;
+    /*padding: 15px 10px;*/
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+}
+.content .short_banners .order_info .order_shipment_offer .orders div {
+    width: 100%;
+}
+.content .short_banners .order_info .order_shipment_offer .orders i.fa {
+    padding: 12px 0;
+}
+.content .short_banners .order_info .order_shipment_offer .orders span.icons {
+    font-size: 20px;
+}
+/*.content .short_banners .order_info .order_shipment_offer .orders {
+    display: inline-flex;
+}
+.content .short_banners .order_info .order_shipment_offer .orders span.icons {
+    padding: 0 10px;
+}*/
+.content .short_banners .tile_banner_fit {
+    display: inline-flex;
+}
+.content .short_banners .tile_banner_fit .tile_banner_down {
+    float: left;
+    width: 25%;
+    padding: 10px;
+}
+.content .short_banners .tile_banner_fit .tile_banner_down img {
+    width: 100%;
+}
