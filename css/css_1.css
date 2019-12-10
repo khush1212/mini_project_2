@@ -242,11 +242,25 @@ ul.font-awesome li {
   font-size: 11px;
   height: 25px;
 }
-table {
+/*table {
   border-collapse: collapse;
 }
 
 table, td, th {
   border: 1px solid black;
   padding: 14px;
+}*/
+.cdl_container #result table{
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+.cdl_container #result table td, .cdl_container #result table th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+.cdl_container #result table tr:nth-child(even) {
+  background-color: #dddddd;
 }

@@ -26,39 +26,39 @@ else
 $result = mysqli_query($conn, $query);
 if(mysqli_num_rows($result) > 0)
 {
- $output .= '
+  $output .= '
   <div class="table-responsive">
-   <table class="table table bordered">
-    <tr>
-     <th>ID</th>
-     <th>FIRSTNAME</th>
-     <th>LASTNAME</th>
-     <th>USERNAME</th>
-     <th>EMAIL-ID</th>
-     <th>PASSWORD</th>
-     <th>MOBILE</th>
-     <th>DOB</th>
-     <th>VIEW</th>
-     <th>DELETE</th>
-     <th>MAKE_ADMIN</th>
-    </tr>
+    <table class="table table bordered">
+      <tr>
+        <th>ID</th>
+        <th>FIRSTNAME</th>
+        <th>LASTNAME</th>
+        <th>USERNAME</th>
+        <th>EMAIL-ID</th>
+        <th>PASSWORD</th>
+        <th>MOBILE</th>
+        <th>DOB</th>
+        <th>VIEW</th>
+        <th>DELETE</th>
+        <th>MAKE_ADMIN</th>
+      </tr>
  ';
  while($row = mysqli_fetch_array($result))
  {
   $output .= '
-   <tr>
-    <td>'.$row["id"].'</td>
-    <td>'.$row["firstname"].'</td>
-    <td>'.$row["lastname"].'</td>
-    <td>'.$row["username"].'</td>
-    <td>'.$row["emailid"].'</td>
-    <td>'.$row["password"].'</td>
-    <td>'.$row["mobile"].'</td>
-    <td>'.$row["dob"].'</td>
-    <td><a href="view.php?user_name='.$row["username"].'&admin_role='.$row["admin_role"].'">View</a></td>
-    <td><a href="delete.php?user_name='.$row["username"].'">Delete</a></td>
-    <td><a href="make_admin.php?user_name='.$row["username"].'">Make Admin</a></td>
-   </tr>
+      <tr>
+        <td>'.$row["id"].'</td>
+        <td>'.$row["firstname"].'</td>
+        <td>'.$row["lastname"].'</td>
+        <td>'.$row["username"].'</td>
+        <td>'.$row["emailid"].'</td>
+        <td>'.$row["password"].'</td>
+        <td>'.$row["mobile"].'</td>
+        <td>'.$row["dob"].'</td>
+        <td><a href="view.php?user_name='.$row["username"].'&admin_role='.$row["admin_role"].'">View</a></td>
+        <td><a href="delete.php?user_name='.$row["username"].'">Delete</a></td>
+        <td><a href="make_admin.php?user_name='.$row["username"].'">Make Admin</a></td>
+      </tr>
   ';
  }
  echo $output;

@@ -1,7 +1,7 @@
 
     
     <?php require 'header.php'; ?>
-
+<div class="view_page_table">
 <?php
 include'config.php';
 $user_name = $_REQUEST['user_name'];
@@ -12,7 +12,7 @@ $admin_role = $_REQUEST['admin_role'];
   } else {
     $sql="SELECT * FROM mini";
   }
-  
+
 $result=$conn->query($sql);
 
 ?>
@@ -70,5 +70,6 @@ else{
 
     
 </table>
+</div>
     <?php require 'footer.php'; ?>
 
