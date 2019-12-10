@@ -264,3 +264,21 @@ table, td, th {
 .cdl_container #result table tr:nth-child(even) {
   background-color: #dddddd;
 }
+.main_wrapper .view_page_table{
+  margin: 0 auto;
+  width: 62%;
+}
+.main_wrapper .view_page_table table{
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+.main_wrapper .view_page_table table td, .view_page_table table th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+.main_wrapper .view_page_table table tr:nth-child(even) {
+  background-color: #dddddd;
+}
