@@ -4,25 +4,15 @@
 
 <?php
 include'config.php';
-$id = $_REQUEST['id'];
 $user_name = $_REQUEST['user_name'];
+$admin_role = $_REQUEST['admin_role'];
 
-$back_url = $_SERVER['HTTP_REFERER'];
-if (strpos($back_url, 'cdl.php') !== false) {
-  if ($user_name != 'admin') {
+  if ($admin_role != 1) {
     $sql="SELECT * FROM `mini` where username = '$user_name'";
-    echo $sql;
   } else {
     $sql="SELECT * FROM mini";
   }
-} else {
-  if ($user_name != 'admin') {
-    $sql="SELECT * FROM `mini` where username = '$user_name'";
-    echo $sql;
-  } else {
-    $sql="SELECT * FROM mini";
-  }
-}
+  
 $result=$conn->query($sql);
 
 ?>

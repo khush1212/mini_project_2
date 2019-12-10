@@ -38,17 +38,15 @@
 							<span class="account_and_cart_img">
 								<div class="dropdown">
 									<span class="dropbtn"><i class="fa fa-user-o"></i></span>
-									<?php if (!empty($_SESSION['logged_in'] = 1) && !empty($_SESSION['user_name'])) { ?>
-										<div class="loggedin_dropdown_content">
-											<a href=""><?php echo "Hi ".$_SESSION['user_name']; ?></a>
-											<a href="logout.php">Logout</a>
-										</div>
-									<?php } else { ?>
 										<div class="dropdown-content">
-											<a href="login.php">Login</a>
-											<a href="register.php">Register</a>
+											<?php if (!empty($_SESSION['logged_in'] = 1) && !empty($_SESSION['user_name'])) { ?>
+												<a href=""><?php echo "Hi ".$_SESSION['user_name']; ?></a>
+												<a href="logout.php">Logout</a>
+											<?php } else { ?>
+												<a href="login.php">Login</a>
+												<a href="register.php">Register</a>
+											<?php } ?>
 										</div>
-									<?php } ?>
 									<span><i class="fa fa-shopping-bag"></i></span>
 								</div>
 							</span>
@@ -80,10 +78,6 @@
 						<a href="#">tokidoki</a>
 					</div>
 					<?php if (!empty($_SESSION['logged_in'] = 1) && !empty($_SESSION['user_name'])) { ?>
-						<div class="menulist">
-							<a href="view.php?user_name=<?php echo $_SESSION['user_name'];?>">View</a>
-						</div>
-
 						<?php
 							$username = $_SESSION['user_name'];
 							$sql="SELECT * FROM `mini` where username ='$username'";
@@ -95,6 +89,11 @@
 								<a href="cdl.php">CDL</a>
 							</div>
 						<?php } ?>
+
+						<div class="menulist">
+							<a href="view.php?user_name=<?php echo $_SESSION['user_name'];?>&admin_role=<?php echo $row['admin_role'];?>">View</a>
+						</div>
+
 					<?php } ?>
 				</div>
 			</div>

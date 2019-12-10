@@ -38,9 +38,9 @@ if(mysqli_num_rows($result) > 0)
      <th>PASSWORD</th>
      <th>MOBILE</th>
      <th>DOB</th>
-     <th></th>
-     <th></th>
-     <th></th>
+     <th>VIEW</th>
+     <th>DELETE</th>
+     <th>MAKE_ADMIN</th>
     </tr>
  ';
  while($row = mysqli_fetch_array($result))
@@ -55,9 +55,9 @@ if(mysqli_num_rows($result) > 0)
     <td>'.$row["password"].'</td>
     <td>'.$row["mobile"].'</td>
     <td>'.$row["dob"].'</td>
-    <td><a href="view.php?user_name='.$row["username"].'">View</a></td>
-    <td><a href="delete.php">Delete</a></td>
-    <td><a href="make_.php">Make Admin</a></td>
+    <td><a href="view.php?user_name='.$row["username"].'&admin_role='.$row["admin_role"].'">View</a></td>
+    <td><a href="delete.php?user_name='.$row["username"].'">Delete</a></td>
+    <td><a href="make_admin.php?user_name='.$row["username"].'">Make Admin</a></td>
    </tr>
   ';
  }

@@ -2,7 +2,7 @@
   <div class="cdl_container">
     <div class="form-group">
       <div class="input-group">
-        <span class="input-group-addon">Search</span>
+        <label>Enter the text for search</label>
         <input type="text" name="search_text" id="search_text" placeholder="Search Customer Details" class="form-control" />
       </div>
     </div>

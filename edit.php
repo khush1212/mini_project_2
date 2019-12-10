@@ -2,14 +2,15 @@
 
 <?php
 	include'config.php';
+
 	$edit_username = $_GET['edit_username'];
+	
 	if (isset($edit_username)) {
 		$sql="SELECT * FROM mini WHERE username='$edit_username'";
 		$result=mysqli_query($conn,$sql);
 		$row=mysqli_fetch_array($result);
 
 		if (isset($_POST['submit'])) {
-			// echo "string";exit;
 			$firstname=$_POST['firstname'];
 			$lastname=$_POST['lastname'];
 			$dob=$_POST['dob'];
@@ -51,35 +52,4 @@
 	}
 ?>
 
-
-
 <?php require 'footer.php'; ?>
-
-
-<?php
-// include'config.php';
-// $edit_username = $_GET['edit_username'];
-// if (isset($_GET['edit_username'])) {
-// 	$sql="SELECT * FROM mini WHERE username='$edit_username'";
-// 	$result=mysqli_query($conn,$sql);
-// 	$row=mysqli_fetch_array($result);
-// 	echo "<pre>";print_r($row);
-
-// 	if (isset($_POST['submit'])) {
-// 		echo "string";exit;
-// 	 	$firstname=$_POST['firstname'];
-// 	 	$lastname=$_POST['lastname'];
-// 	 	$dob=$_POST['dob'];
-
-// 	 	$update="UPDATE mini SET firstname='".$firstname."',lastname='".$lastname."',dob='".$dob."' WHERE username='".$_GET['edit_username']."'";
-// 	 	echo $update;
-// 	 	// $update= mysqli_query($conn,$update);
-// 	 	// if (!isset($sql)) {
-// 	 	// 	die("error $sql".mysqli_connect_error());
-// 	 	// }else{
-// 	 	// 	header("location:http://localhost/mini_project_2/view.php");
-// 	 	// }
-// 	 } 
-// }
-
-?>
